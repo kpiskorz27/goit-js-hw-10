@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
 
 const breedSelect = document.querySelector('.breed-select');
@@ -22,7 +23,14 @@ function renderSelect(breeds) {
 }
 breedSelect.addEventListener('change', e => {
   loader.classList.remove('hidden');
-  fetchCatByBreed(e.target.value).then(data => renderCat(data[0]));
+  fetchCatByBreed(e.target.value)
+    .then(data => renderCat(data[0]))
+    .catch(() => {
+      loader.classList.add('hidden');
+      Notiflix.Notify.failure(
+        'Cat information error. Try choosing another breed!'
+      );
+    });
 });
 
 function renderCat(catData) {

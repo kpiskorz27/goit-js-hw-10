@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import axios from 'axios';
 export const fetchBreeds = () => {
   axios.defaults.headers.common['x-api-key'] =
