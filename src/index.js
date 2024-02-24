@@ -43,6 +43,7 @@ function renderCat(catData) {
         <h2>${name}</h2>
         <img src="${url}" alt="${name}" />
         <p>${description}</p>
+
         <p><strong>Temperament:</strong> ${temperament}</p>
     </div>`
   );

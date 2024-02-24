@@ -1,3 +1,46 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--NAVY-BLUE);
+  padding: 112px 0 112px 0;
+  background-image: linear-gradient(
+      rgba(197, 198, 219, 0.9),
+      rgba(244, 244, 244, 0.9)
+    ),
+    url(../images/kitties.jpg);
+}
+
+h1,
+h2 {
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+
+p {
+  margin: auto;
+  text-align: start;
+  width: 500px;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+  border-style: solid;
+}
+
+.cat-info {
+  margin: 0 auto;
+  height: 100vh;
+}
+
 .hidden {
   display: none;
 }
@@ -30,5 +73,32 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.breed-select {
+  display: block;
+  margin: 20px auto;
+  font-size: large;
+}
+
+@media screen and (max-width: 427px) {
+  img,
+  p {
+    max-width: 427px;
+  }
+}
+
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  img,
+  p {
+    width: 428px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img,
+  p {
+    width: 767px;
   }
 }
